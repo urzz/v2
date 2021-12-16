@@ -71,7 +71,8 @@ func (s *Storage) Integration(userID int64) (*model.Integration, error) {
 			pocket_consumer_key,
 			telegram_bot_enabled,
 			telegram_bot_token,
-			telegram_bot_chat_id
+			telegram_bot_chat_id,
+			telegram_bot_proxy_url
 		FROM
 			integrations
 		WHERE
@@ -105,6 +106,7 @@ func (s *Storage) Integration(userID int64) (*model.Integration, error) {
 		&integration.TelegramBotEnabled,
 		&integration.TelegramBotToken,
 		&integration.TelegramBotChatID,
+		&integration.TelegramBotProxyUrl,
 	)
 	switch {
 	case err == sql.ErrNoRows:
@@ -146,9 +148,10 @@ func (s *Storage) UpdateIntegration(integration *model.Integration) error {
 			pocket_consumer_key=$22,
 			telegram_bot_enabled=$23,
 			telegram_bot_token=$24,
-			telegram_bot_chat_id=$25
+			telegram_bot_chat_id=$25,
+			telegram_bot_proxy_url=$26
 		WHERE
-			user_id=$26
+			user_id=$27
 	`
 	_, err := s.db.Exec(
 		query,
@@ -177,6 +180,7 @@ func (s *Storage) UpdateIntegration(integration *model.Integration) error {
 		integration.TelegramBotEnabled,
 		integration.TelegramBotToken,
 		integration.TelegramBotChatID,
+		integration.TelegramBotProxyUrl,
 		integration.UserID,
 	)
 

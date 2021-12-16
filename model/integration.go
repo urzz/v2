@@ -32,4 +32,5 @@ type Integration struct {
 	TelegramBotEnabled   bool
 	TelegramBotToken     string
 	TelegramBotChatID    string
+	TelegramBotProxyUrl  string
 }

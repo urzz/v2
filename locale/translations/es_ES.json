@@ -331,6 +331,7 @@
     "form.integration.telegram_bot_activate": "Envíe nuevos artículos al chat de Telegram",
     "form.integration.telegram_bot_token": "Token de bot",
     "form.integration.telegram_chat_id": "ID de chat",
+    "form.integration.telegram_proxy_url": "HTTP Proxy",
     "form.api_key.label.description": "Etiqueta de clave API",
     "form.submit.loading": "Cargando...",
     "form.submit.saving": "Guardando...",

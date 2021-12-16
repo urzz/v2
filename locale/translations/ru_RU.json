@@ -333,6 +333,7 @@
     "form.integration.telegram_bot_activate": "Публикуйте новые статьи в Telegram-чате",
     "form.integration.telegram_bot_token": "Токен бота",
     "form.integration.telegram_chat_id": "ID чата",
+    "form.integration.telegram_proxy_url": "HTTP Proxy",
     "form.api_key.label.description": "Описание API-ключа",
     "form.submit.loading": "Загрузка…",
     "form.submit.saving": "Сохранение…",

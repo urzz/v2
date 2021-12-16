@@ -37,6 +37,7 @@ type IntegrationForm struct {
 	TelegramBotEnabled   bool
 	TelegramBotToken     string
 	TelegramBotChatID    string
+	TelegramBotProxyUrl  string
 }
 
 // Merge copy form values to the model.
@@ -65,6 +66,7 @@ func (i IntegrationForm) Merge(integration *model.Integration) {
 	integration.TelegramBotEnabled = i.TelegramBotEnabled
 	integration.TelegramBotToken = i.TelegramBotToken
 	integration.TelegramBotChatID = i.TelegramBotChatID
+	integration.TelegramBotProxyUrl = i.TelegramBotProxyUrl
 }
 
 // NewIntegrationForm returns a new AuthForm.
@@ -95,5 +97,6 @@ func NewIntegrationForm(r *http.Request) *IntegrationForm {
 		TelegramBotEnabled:   r.FormValue("telegram_bot_enabled") == "1",
 		TelegramBotToken:     r.FormValue("telegram_bot_token"),
 		TelegramBotChatID:    r.FormValue("telegram_bot_chat_id"),
+		TelegramBotProxyUrl:  r.FormValue("telegram_bot_proxy_url"),
 	}
 }

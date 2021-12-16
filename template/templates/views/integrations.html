@@ -148,6 +148,9 @@
         <label for="form-telegram-chat-id">{{ t "form.integration.telegram_chat_id" }}</label>
         <input type="text" name="telegram_bot_chat_id" id="form-telegram-chat-id" value="{{ .form.TelegramBotChatID }}" spellcheck="false">
 
+        <label for="form-telegram-proxy-url">{{ t "form.integration.telegram_proxy_url" }}</label>
+        <input type="text" name="telegram_bot_proxy_url" id="form-telegram-proxy-url" value="{{ .form.TelegramBotProxyUrl }}" spellcheck="false">
+
         <div class="buttons">
             <button type="submit" class="button button-primary" data-label-loading="{{ t "form.submit.saving" }}">{{ t "action.update" }}</button>
         </div>
