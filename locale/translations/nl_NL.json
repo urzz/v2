@@ -331,7 +331,7 @@
     "form.integration.telegram_bot_activate": "Push nieuwe artikelen naar Telegram-chat",
     "form.integration.telegram_bot_token": "Bot token",
     "form.integration.telegram_chat_id": "Chat ID",
-    "form.integration.telegram_proxy_url": "HTTP Proxy",
+    "form.integration.telegram_proxy_url": "Proxy Url",
     "form.api_key.label.description": "API-sleutellabel",
     "form.submit.loading": "Laden...",
     "form.submit.saving": "Opslaag...",
